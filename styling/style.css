@@ -60,7 +60,7 @@ section {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.809), rgba(0, 0, 0, 0.5)), url('/Img/hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.809), rgba(0, 0, 0, 0.5)), url(../Img/hero.jpg) ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -221,23 +221,54 @@ section {
 
 /* Register Section */
 #register {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.679)), url('/Img/crash.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.679)), url(../Img/crash.jpg);
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     padding: 4rem 1rem;
 }
+.rules-note {
+    color: #ffd700;
+    margin: 1rem 0;
+    font-style: italic;
+}
 
-.register-btn {
+.register-btn,
+.rules-btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background: #ffd700;
-    color: black;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 200px;
+}
+
+.register-btn {
+    background: #ffd700;
+    color: black;
+    border: 2px solid #ffd700;
+}
+
+.rules-btn {
+    background: transparent;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+}
+
+.register-btn:hover,
+.rules-btn:hover {
+    background: #ffd700;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.button-group {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
     margin-top: 2rem;
 }
 
@@ -413,5 +444,19 @@ footer {
     
     .countdown-item .label {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .rules-btn,
+    .register-btn {
+        width: 100%;
+        max-width: 300px;
     }
 }

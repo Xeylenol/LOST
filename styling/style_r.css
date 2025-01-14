@@ -1,6 +1,6 @@
 /* Rules Page Specific Styles */
 #rules-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Img/rules.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Img/rules.jpg);
     background-size: cover;
     background-position: right center;
     color: white;
