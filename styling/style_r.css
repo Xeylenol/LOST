@@ -1,0 +1,125 @@
+/* Rules Page Specific Styles */
+#rules-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/Img/rules.jpg');
+    background-size: cover;
+    background-position: right center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.info-card {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.info-card i {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+#registration-rules,
+#general-rules,
+#conduct-rules,
+#disqualification {
+    background: #1a1a1a;
+    color: white;
+    padding: 2rem; 
+    margin: 0; }
+
+#registration-rules h2,
+#general-rules h2,
+#conduct-rules h2,
+#disqualification h2 {
+    color: #ffd700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* Alternate section backgrounds for visual separation */
+#registration-rules,
+#conduct-rules {
+    background: #1a1a1a;
+}
+
+#general-rules,
+#disqualification {
+    background: #2a2a2a;
+}
+
+section h2 {
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
+}
+
+section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+section ul li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+section ul li:before {
+    content: "•";
+    color: #ffd700;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    #rules-header {
+        text-align: left;
+        padding: 2rem 1.5rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #rules-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #rules-header p {
+        font-size: 1.1rem;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+}
+
+section ul {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section ul li {
+    margin-bottom: 0.75rem; /* Reduced from 1rem */
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem; /* Reduced from 3rem */
+    }
+}

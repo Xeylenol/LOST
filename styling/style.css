@@ -1,0 +1,417 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.809), rgba(0, 0, 0, 0.5)), url('/Img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+#hero .logo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Gallery Section */
+#gallery {
+    background: #1a1a1a;
+    color: white;
+    padding: 4rem 1rem;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-item.video {
+    width: 500px;
+    height: 300px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Lore Section */
+#lore {
+    background: #2a2a2a;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+#lore h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #ffd700;
+}
+
+#lore p {
+    max-width: 800px;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Makers Section */
+#makers {
+    background: #1a1a1a;
+    color: white;
+    padding: 4rem 1rem;
+}
+
+#makers h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: #ffd700;
+    text-align: center;
+}
+
+.makers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.maker-card {
+    text-align: center;
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.maker-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.maker-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+}
+
+.maker-card h3 {
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.maker-card .role {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.maker-card .description {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Register Section */
+#register {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.679)), url('/Img/crash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.register-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    margin-top: 2rem;
+}
+
+/* Countdown Timer Styles */
+.countdown {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.countdown-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.countdown-item .label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a:hover {
+    color: #ffd700;
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    #hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        padding: 0;
+    }
+
+    #hero .logo {
+        max-width: 80%;
+        margin: 0 auto 2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+        padding: 0 2rem;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+    }
+
+    .gallery-item img {
+        width: 250px;
+        height: 160px;
+    }
+
+    .gallery-item.video {
+        width: 300px;
+        height: 180px;
+    }
+
+    #lore h2, #makers h2 {
+        font-size: 2rem;
+    }
+
+    .makers-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .maker-card {
+        padding: 1.5rem;
+    }
+
+    .maker-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .countdown {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+    }
+    
+    .countdown-item span:first-child {
+        font-size: 1.8rem;
+    }
+    
+    .countdown-item .label {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST - Rules & Regulations</title>
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="styling/style_r.css">
+    <link rel="icon" href="styling/lost.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
+</head>
+<body>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu" size="24"></i>
+    </button>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html#hero">LOST</a></li>
+            <li><a href="index.html#lore">Lore</a></li>
+            <li><a href="index.html#makers">Makers</a></li>
+            <li><a href="index.html#register">Register</a></li>
+            <li><a href="rules.html">Rules</a></li>
+        </ul>
+    </nav>
+
+    <section id="rules-header">
+        <h1>Rules & Regulations</h1>
+        <p>Please read all rules carefully before participating in LOST</p>
+    </section>
+
+    <section id="event-details">
+        <h2>Event Details</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <i data-lucide="calendar" size="24"></i>
+                <h3>Date</h3>
+                <p>9th February 2024</p>
+            </div>
+            <div class="info-card">
+                <i data-lucide="clock" size="24"></i>
+                <h3>Timing</h3>
+                <p>10:00 AM - 6:00 PM</p>
+            </div>
+            <div class="info-card">
+                <i data-lucide="users" size="24"></i>
+                <h3>Team Size</h3>
+                <p>3-4 Members</p>
+            </div>
+            <div class="info-card">
+                <i data-lucide="map-pin" size="24"></i>
+                <h3>Venue</h3>
+                <p>IISER Kolkata</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="registration-rules">
+        <h2>Registration Rules</h2>
+        <ul>
+            <li>Registration deadline: February 5th, 2024</li>
+            <li>Team size must be between 3-4 members</li>
+            <li>All team members must be present during registration confirmation</li>
+            <li>Teams must report to the LOST stall by 9:45 AM on event day</li>
+            <li>On-spot registrations may be available if quota is not filled</li>
+            <li>Valid ID proof required for all team members</li>
+        </ul>
+    </section>
+
+    <section id="general-rules">
+        <h2>General Rules</h2>
+        <ul>
+            <li>The event will run for approximately 6 hours</li>
+            <li>Results will be announced at 6:00 PM</li>
+            <li>Teams must stay together throughout the hunt</li>
+            <li>Use of personal vehicles is not allowed</li>
+            <li>Mobile phones are permitted but must be used ethically</li>
+            <li>All clues and puzzles must be solved without external help</li>
+            <li>Respect campus property and environment</li>
+        </ul>
+    </section>
+
+    <section id="conduct-rules">
+        <h2>Code of Conduct</h2>
+        <ul>
+            <li>Maintain decorum and discipline throughout the event</li>
+            <li>Follow instructions from event organizers</li>
+            <li>No interference with other teams' progress</li>
+            <li>No sharing of clues or solutions with other teams</li>
+            <li>Respect all safety guidelines and protocols</li>
+        </ul>
+    </section>
+
+    <section id="disqualification">
+        <h2>Grounds for Disqualification</h2>
+        <ul>
+            <li>Breaking any of the above rules</li>
+            <li>Damaging campus property</li>
+            <li>Cheating or unfair practices</li>
+            <li>Misbehavior with organizers or other participants</li>
+            <li>Not following safety protocols</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram">
+                <i data-lucide="instagram" size="24"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+                <i data-lucide="twitter" size="24"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Inquivesta. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('#nav-menu');
+            const menuIcon = menuBtn.querySelector('i');
+
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuIcon.setAttribute('data-lucide', navMenu.classList.contains('active') ? 'x' : 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
