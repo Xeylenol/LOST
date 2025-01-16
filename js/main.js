@@ -61,7 +61,6 @@ function updateCountdown() {
     }
 }
 
-// Improved mobile menu with accessibility and cleanup
 function initializeMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('#nav-menu');
