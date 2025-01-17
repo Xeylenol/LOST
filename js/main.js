@@ -61,6 +61,15 @@ function updateCountdown() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const registerBtn = document.querySelector('.register-btn');
+    if (registerBtn) {
+        registerBtn.addEventListener('click', () => {
+            window.location.href = 'register.html';
+        });
+    }
+});
+
 function initializeMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('#nav-menu');
