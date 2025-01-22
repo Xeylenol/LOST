@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerBtn = document.querySelector('.register-btn');
     if (registerBtn) {
         registerBtn.addEventListener('click', () => {
-            window.location.href = 'register.html';
+            window.location.href = 'https://www.inquivesta.in/#/register/LOST';
         });
     }
 });
