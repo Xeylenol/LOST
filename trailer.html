@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST - Rules & Regulations</title>
+    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="styling/style_r.css">
+    <link rel="icon" href="styling/lost.ico" type="image/x-icon">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i data-lucide="menu" size="24"></i>
+    </button>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html#hero">LOST</a></li>
+            <li><a href="index.html#lore">Lore</a></li>
+            <li><a href="trailer.html">Trailer</a></li>
+            <li><a href="index.html#makers">Makers</a></li>
+            <li><a href="index.html#register">Register</a></li>
+            <li><a href="rules.html">Rules</a></li>
+        </ul>
+    </nav>
+
+<!-- Trailer Section -->
+<section id="trailer">
+    <h2>Official Trailer</h2>
+    <p>Watch the official trailer of LOST</p>
+    <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe width="900" 
+        height="506" src="https://www.youtube.com/embed/OxbXmexGJcY?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"></iframe></div>
+</section>
+
+<footer>
+    <div class="social-links">
+        <a href="https://www.instagram.com/inquivesta_iiserk/" aria-label="Instagram">
+            <i data-lucide="instagram" size="24"></i>
+        </a>
+        <a href="inquivesta@iiserkol.ac.in" aria-label="mail">
+            <i data-lucide="mail" size="24"></i>
+        </a>
+    </div>
+    <tr>
+        <td align="center" style="padding: 10px; background-color: #1a1a2e; color: #ffc078; font-size: 12px;">
+            <p style="margin: 5px 0;">Part of INQUIVESTA XI - Where Mystery Meets Adventure</p>
+            <p style="margin: 5px 0;">© 2025 L.O.S.T. Expedition | All Rights Reserved</p>
+        </td>
+    </tr>
+</footer>
+
+<script>
+    lucide.createIcons();
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('#nav-menu');
+        const menuIcon = menuBtn.querySelector('i');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuIcon.setAttribute('data-lucide', navMenu.classList.contains('active') ? 'x' : 'menu');
+            lucide.createIcons();
+        });
+    });
+</script>
+</body>
+</html>

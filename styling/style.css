@@ -335,6 +335,37 @@ footer {
     height: 24px;
 }
 
+/* Trailer Section */
+#trailer {
+    background: #170f0f;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+#trailer h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #f5943a;
+}
+
+#trailer .video-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #trailer h2 {
+        font-size: 2rem;
+    }
+    
+    #trailer {
+        padding: 3rem 1rem;
+    }
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .mobile-menu-btn {
