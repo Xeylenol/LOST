@@ -17,7 +17,7 @@ function updateCountdown() {
             
             if (distance <= 0) {
                 clearInterval(timer);
-                countdownElement.innerHTML = "<h2>Event has started!</h2>";
+                countdownElement.innerHTML = "<h2>Event has Ended!</h2>";
                 return;
             }
 
